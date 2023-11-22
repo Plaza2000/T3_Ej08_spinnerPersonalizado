@@ -5,38 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/descripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ellipsize="none"
-        android:scrollHorizontally="false"
-        android:text="Albacete, la ciudad del cuchillo!"
-        app:layout_constraintEnd_toEndOf="@+id/nombre"
-        app:layout_constraintStart_toStartOf="@+id/nombre"
-        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+    <ImageView
+        android:id="@+id/imagenCiudad"
+        android:layout_width="254dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/gironafc"
+        app:layout_constraintEnd_toStartOf="@+id/descripcion"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
         android:text="Albacete"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imagenCiudad"
+        app:layout_constraintTop_toTopOf="@+id/imagenCiudad" />
 
-    <ImageView
-        android:id="@+id/imagenCiudad"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/albacete"
-        app:layout_constraintEnd_toEndOf="@+id/descripcion"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="@+id/descripcion"
-        app:layout_constraintTop_toBottomOf="@+id/descripcion" />
+        android:layout_marginTop="60dp"
+        android:ellipsize="none"
+        android:scrollHorizontally="false"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/nombre"
+        app:layout_constraintTop_toTopOf="@+id/nombre" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

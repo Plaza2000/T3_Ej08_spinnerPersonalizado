@@ -11,21 +11,16 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity(),  AdapterView.OnItemSelectedListener{
 
     //Utilizo tres vectores con los elementos que necesito
-    private val ciudades = arrayOf("Toledo", "Ciudad Real", "Albacete", "Cuenca", "Guadalajara")
-    private val descripciones = arrayOf(
-        "Toledo es famosa por su alcázar",
-        "Ciudad famosa por su aeropuerto",
-        "El origen de tus cuchillos",
-        "Ciudad de las casas colgantes",
-        "A un pasito de Madrid"
-    )
+    private val ciudades = arrayOf("valladolid", "barca", "girona", "realsoc", "realmadrid")
+
 
     private val imagenes = intArrayOf(
-        R.drawable.toledo,
-        R.drawable.ciudadreal,
-        R.drawable.albacete,
-        R.drawable.cuenca,
-        R.drawable.guadalajara
+        R.drawable.valladolid1,
+        R.drawable.barcelona,
+        R.drawable.gironafc,
+        R.drawable.realsociedad1,
+        R.drawable.realmadrid,
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -128,7 +123,7 @@ class MainActivity : AppCompatActivity(),  AdapterView.OnItemSelectedListener{
             rowView.findViewById<TextView>(R.id.nombre).text = ciudades[position]
 
             //Fijamos la descripción de la ciudad
-            rowView.findViewById<TextView>(R.id.descripcion).text = descripciones[position]
+
 
             //Fijamos la imagen de la ciudad
             rowView.findViewById<ImageView>(R.id.imagenCiudad).setImageResource(imagenes[position])
